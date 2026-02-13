@@ -11,18 +11,18 @@ export OUTPUT_COLUMN="Review-sentiment"
 export THINKING=0
 export RESULTS_CSV=results/qwen3-amazon_no_thinking.csv
 
-# ./scripts/eval-ollama-model.sh qwen3:4b_16k $RESULTS_CSV
-# ./scripts/eval-ollama-model.sh qwen3:8b_16k $RESULTS_CSV
-# ./scripts/eval-ollama-model.sh qwen3:14b_16k $RESULTS_CSV
-# ./scripts/eval-ollama-model.sh qwen3:32b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:4b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:8b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:14b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:32b_16k $RESULTS_CSV
 
 export THINKING=1
 export RESULTS_CSV=results/qwen3-amazon_thinking.csv
 
-# ./scripts/eval-ollama-model.sh qwen3:4b_16k $RESULTS_CSV
-# ./scripts/eval-ollama-model.sh qwen3:8b_16k $RESULTS_CSV
-# ./scripts/eval-ollama-model.sh qwen3:14b_16k $RESULTS_CSV
-# ./scripts/eval-ollama-model.sh qwen3:32b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:4b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:8b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:14b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh qwen3:32b_16k $RESULTS_CSV
 
 export DATA_PATH=dataset/imdb_reviews.csv
 export OUTPUT_COLUMN="Review-basic-sentiment"

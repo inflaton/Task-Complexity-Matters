@@ -5,22 +5,11 @@ cd $BASEDIR/..
 echo Current Directory:
 pwd
 
-export NUM_CTX=8192
-export RESULTS_PATH=results/amazon_reviews_results_all.csv
+# Qwen3 family (4B, 8B, 14B, 32B × thinking/non-thinking × 3 datasets)
+bash scripts/eval-qwen3.sh
 
-./scripts/eval-model.sh deepseek-r1:8b_8k
+# Granite3.3 family (2B, 8B × thinking/non-thinking × 3 datasets)
+bash scripts/eval-granite.sh
 
-./scripts/eval-model.sh llama3.1:8b_8k
-
-./scripts/eval-model.sh deepseek-r1:14b_8k
-
-./scripts/eval-model.sh qwen2.5:14b_8k
-
-./scripts/eval-model.sh deepseek-r1:32b_8k
-
-./scripts/eval-model.sh qwen2.5:32b_8k
-
-./scripts/eval-model.sh deepseek-r1:70b_8k
-
-./scripts/eval-model.sh llama3.3:70b_8k 
-
+# Magistral (24B × thinking/non-thinking × 3 datasets)
+bash scripts/eval-magistral.sh

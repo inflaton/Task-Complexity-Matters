@@ -6,18 +6,18 @@ echo Current Directory:
 pwd
 
 export DATA_PATH=dataset/amazon_reviews.csv
-# export OUTPUT_COLUMN="Review-sentiment"
+export OUTPUT_COLUMN="Review-sentiment"
 
-# export THINKING=0
-# export RESULTS_CSV=results/magistral-amazon_no_thinking.csv
+export THINKING=0
+export RESULTS_CSV=results/magistral-amazon_no_thinking.csv
 
-# ./scripts/eval-ollama-model.sh magistral:24b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh magistral:24b_16k $RESULTS_CSV
 
 
-# export THINKING=1
-# export RESULTS_CSV=results/magistral-amazon_thinking.csv
+export THINKING=1
+export RESULTS_CSV=results/magistral-amazon_thinking.csv
 
-# ./scripts/eval-ollama-model.sh magistral:24b_16k $RESULTS_CSV
+./scripts/eval-ollama-model.sh magistral:24b_16k $RESULTS_CSV
 
 
 export START_NUM_SHOTS=0

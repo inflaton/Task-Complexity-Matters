@@ -117,6 +117,16 @@ Set keys and paths in `.env`:
 - `BASE_URL` — Ollama endpoint (default: `http://localhost:11434/v1`)
 - `NUM_CTX` — context window size
 
+### Set up Ollama models
+
+Create all required Ollama models for evaluation:
+
+```bash
+bash scripts/create-all-models.sh
+```
+
+This script creates custom Ollama models with the necessary configurations for Qwen3, Granite3.3, and Magistral model families.
+
 ### Infrastructure
 
 - **DeepSeek-R1 (full)** and **DeepSeek-V3**: via official DeepSeek APIs
